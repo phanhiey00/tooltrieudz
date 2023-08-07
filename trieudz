@@ -1,0 +1,11 @@
+ # Điền thông tin tài khoản
+    session.get("https://id.auone.jp/id/userinfo/cinfo_set.html")
+    session.find_element(By.ID, "nameKanji").send_keys("Tan Trieu")
+    session.find_element(By.ID, "nameKana").send_keys("タン チェウ")
+    session.find_element(By.ID, "zip").send_keys("1120000")
+    session.find_element(By.ID, "addr1").send_keys("TrieuDepTrai")
+    session.find_element(By.ID, "tel").send_keys("74747474743")
+    session.find_element(By.XPATH, '//*[@id="cinfo"]/div/a[2]/img').click()
+    session.find_element(By.XPATH, '//*[@id="cinfo"]/div[3]/a[2]/img').click()
+    session.find_element(By.XPATH, '//*[@id="auonePwd"]').send_keys(password)
+    session.find_element(By.XPATH, '//*[@id="btn_pwdLogin"]').click()
